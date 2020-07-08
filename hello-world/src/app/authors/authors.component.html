@@ -1,0 +1,62 @@
+<!-- <h1>
+  Angular
+</h1>
+<h2>{{authors.length + title}}</h2>
+<ul>
+  <li *ngFor="let author of authors">
+    {{ author }}
+  </li>
+</ul> -->
+
+<!-- <button class="btn btn-primary">Save</button> -->
+
+<!-- Class Binding -->
+<!-- <button class="btn btn-primary" [class.active]="isActive">Active</button>
+<button class="btn btn-primary" [class.active]="isInActive">Inactive</button> -->
+
+<!-- Style Binding -->
+<!-- <button [style.backgroundColor]="isActive?'blue':'white'">ActiveColor</button>
+<button [style.backgroundColor]="isInActive?'blue':'white'">InActiveColor</button> -->
+
+<!-- Event Binding -->
+<!-- <button (click)='onClick($event)'>Click</button> -->
+
+<!-- Event Bubbling -->
+<!-- <div (click)='onDivClick()'>
+  <button (click)='onClick($event)'>Click</button>
+</div> -->
+<!-- Without Event Filtering 
+<input (keyup)="onKeyUp($event)" /> -->
+
+<!-- With Event Filtering 
+<input (keyup.enter)="onKeyUp()" /> -->
+
+<!-- Without template variables
+<input (keyup)="onKeyUp($event)" /> -->
+
+<!-- With template variables
+<input #email (keyup.enter)="onKeyUp(email.value)" /> -->
+
+<!-- Two-way Binding using Event Binding
+<input [value]=email (keyup.enter)="email=$event.target.value; onKeyUp($event)" />  -->
+
+<!-- Two-way Binding using ngModel
+<input [(ngModel)]=email (keyup.enter)="onKeyUp()" />  -->
+
+<!-- Built-in Pipes  -->
+<!-- {{course.title | uppercase | lowercase}}
+<br/> {{course.students | number}}
+<br/> {{course.rating | number:'2.1-1'}}
+<br/> {{course.price | currency:'INR':true:'3.2-2'}}
+<br/> {{course.releaseDate | date:'shortDate'}} -->
+
+<!-- Custom Pipes  -->
+<!-- Without args -->
+<!-- {{text|summary}} -->
+<!-- With args -->
+<!-- {{text|summary:10}} -->
+
+<div class="glyphicon"
+     [class.glyphicon-star]="isFavorite"
+     [class.glyphicon-star-empty]="!isFavorite"
+     (click)=onClick()></div>
